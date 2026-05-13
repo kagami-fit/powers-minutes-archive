@@ -1,0 +1,22 @@
+{
+  "name": "powers",
+  "version": "1.0.0",
+  "description": "Codexで作成した議事録とImage-gen2図解PNGを日付別に見せる共有用Webアーカイブ",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "node server/index.js",
+    "start": "node server/index.js",
+    "check": "node --check server/index.js && node --check server/minutes.js && node --check scripts/add-record.js",
+    "add-record": "node scripts/add-record.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
+  }
+}

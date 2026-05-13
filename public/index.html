@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Powers Minutes Archive</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="日付別アーカイブ">
+        <div class="brand">
+          <div>
+            <img class="brand-logo" src="./brand/powers-gym-logo.png" alt="POWERS GYM" />
+            <p>MTG Archive</p>
+          </div>
+        </div>
+        <div class="sidebar-header">
+          <span>日付別</span>
+          <button class="icon-button" id="refreshButton" type="button" aria-label="更新">↻</button>
+        </div>
+        <nav id="archiveList" class="archive-list"></nav>
+      </aside>
+
+      <main class="workspace">
+        <header class="archive-hero">
+          <div>
+            <p class="eyebrow">Meeting Minutes</p>
+            <h2>議事録アーカイブ</h2>
+          </div>
+          <p>Codexで作成した議事録と図解画像を、日付ごとに見返せる共有ビューです。</p>
+        </header>
+
+        <section id="detailPane" class="detail-pane empty-state">
+          <div class="empty-copy">
+            <h2>議事録を選択</h2>
+            <p>日付別アーカイブから選ぶと、要約・決定事項・アクション・図解を表示します。</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
