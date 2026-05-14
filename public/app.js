@@ -7,12 +7,19 @@ const els = {
   archiveList: document.querySelector("#archiveList"),
   detailPane: document.querySelector("#detailPane"),
   refreshButton: document.querySelector("#refreshButton"),
+  imageLightbox: document.querySelector("#imageLightbox"),
+  lightboxImage: document.querySelector("#lightboxImage"),
+  lightboxClose: document.querySelector("#lightboxClose"),
 };
 
 await init();
 
 async function init() {
   els.refreshButton.addEventListener("click", () => loadRecords());
+  els.detailPane.addEventListener("click", handleDetailClick);
+  els.imageLightbox.addEventListener("click", handleLightboxClick);
+  els.lightboxClose.addEventListener("click", closeLightbox);
+  document.addEventListener("keydown", handleDocumentKeydown);
   await loadRecords();
 }
 
@@ -168,10 +175,46 @@ function diagramSection(record) {
         ${record.diagramCaption ? `<p>${escapeHtml(record.diagramCaption)}</p>` : ""}
       </div>
       <div class="diagram-frame">
-        <img src="${escapeHtml(url)}" alt="${escapeHtml(record.title)}の図解" />
+        <button class="diagram-zoom-button" type="button" data-lightbox-src="${escapeHtml(url)}" data-lightbox-alt="${escapeHtml(record.title)}の図解" aria-label="${escapeHtml(record.title)}の図解を拡大">
+          <img src="${escapeHtml(url)}" alt="${escapeHtml(record.title)}の図解" />
+        </button>
       </div>
     </section>
   `;
+}
+
+function handleDetailClick(event) {
+  const button = event.target.closest("[data-lightbox-src]");
+  if (!button) return;
+  openLightbox(button.dataset.lightboxSrc, button.dataset.lightboxAlt || "");
+}
+
+function openLightbox(src, alt) {
+  els.lightboxImage.src = src;
+  els.lightboxImage.alt = alt;
+  els.imageLightbox.hidden = false;
+  els.imageLightbox.setAttribute("aria-hidden", "false");
+  document.body.classList.add("lightbox-open");
+  els.lightboxClose.focus();
+}
+
+function closeLightbox() {
+  els.imageLightbox.hidden = true;
+  els.imageLightbox.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("lightbox-open");
+  els.lightboxImage.removeAttribute("src");
+}
+
+function handleLightboxClick(event) {
+  if (event.target.closest("[data-lightbox-close]")) {
+    closeLightbox();
+  }
+}
+
+function handleDocumentKeydown(event) {
+  if (event.key === "Escape" && !els.imageLightbox.hidden) {
+    closeLightbox();
+  }
 }
 
 function assetUrl(value) {
