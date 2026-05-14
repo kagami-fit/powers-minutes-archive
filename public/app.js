@@ -141,9 +141,9 @@ function actionPanel(items = []) {
     .map(
       (item) => `
       <tr>
-        <td>${escapeHtml(item.owner || "未設定")}</td>
-        <td>${escapeHtml(item.task || "")}</td>
-        <td>${escapeHtml(item.due || "未設定")}</td>
+        <td data-label="担当">${escapeHtml(item.owner || "未設定")}</td>
+        <td data-label="タスク">${escapeHtml(item.task || "")}</td>
+        <td data-label="期限">${escapeHtml(item.due || "未設定")}</td>
       </tr>`
     )
     .join("");
@@ -152,7 +152,7 @@ function actionPanel(items = []) {
       <h3>アクション</h3>
       <table class="action-table">
         <thead><tr><th>担当</th><th>タスク</th><th>期限</th></tr></thead>
-        <tbody>${rows || `<tr><td>未設定</td><td>未記載</td><td>未設定</td></tr>`}</tbody>
+        <tbody>${rows || `<tr><td data-label="担当">未設定</td><td data-label="タスク">未記載</td><td data-label="期限">未設定</td></tr>`}</tbody>
       </table>
     </section>
   `;

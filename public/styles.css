@@ -27,6 +27,10 @@ body {
   letter-spacing: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 button,
 input,
 textarea {
@@ -149,10 +153,12 @@ button {
 .record-meta {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
   margin-top: 6px;
   color: var(--muted);
   font-size: 12px;
+  line-height: 1.45;
 }
 
 .status-dot {
@@ -220,6 +226,7 @@ button {
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: var(--shadow);
+  min-width: 0;
 }
 
 .composer {
@@ -330,6 +337,7 @@ textarea {
   border-bottom: 1px solid var(--soft-line);
   display: grid;
   gap: 16px;
+  min-width: 0;
 }
 
 .detail-title-row {
@@ -343,7 +351,8 @@ textarea {
   margin: 0;
   font-size: 30px;
   line-height: 1.25;
-  word-break: break-word;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 .detail-header .eyebrow {
@@ -363,6 +372,7 @@ textarea {
   gap: 8px;
   color: var(--muted);
   font-size: 13px;
+  min-width: 0;
 }
 
 .pill {
@@ -387,6 +397,7 @@ textarea {
   padding: 28px;
   display: grid;
   gap: 24px;
+  min-width: 0;
 }
 
 .insight-grid {
@@ -399,6 +410,7 @@ textarea {
   border: 1px solid var(--soft-line);
   border-radius: 8px;
   padding: 18px;
+  min-width: 0;
 }
 
 .insight-panel h3,
@@ -420,6 +432,7 @@ textarea {
   width: 100%;
   border-collapse: collapse;
   font-size: 14px;
+  table-layout: fixed;
 }
 
 .action-table th,
@@ -428,6 +441,7 @@ textarea {
   padding: 10px 8px;
   text-align: left;
   vertical-align: top;
+  overflow-wrap: anywhere;
 }
 
 .action-table th {
@@ -471,7 +485,7 @@ textarea {
 .diagram-frame img {
   display: block;
   width: 100%;
-  min-width: 860px;
+  min-width: 0;
   height: auto;
 }
 
@@ -560,15 +574,75 @@ textarea {
 }
 
 @media (max-width: 720px) {
+  body {
+    background: #f7f5ee;
+  }
+
   .workspace,
   .sidebar {
-    padding: 18px;
+    padding: 16px;
+  }
+
+  .sidebar {
+    display: grid;
+    gap: 14px;
+  }
+
+  .brand {
+    padding-bottom: 16px;
+  }
+
+  .brand-logo {
+    width: min(168px, 72vw);
+  }
+
+  .sidebar-header {
+    margin: 0;
   }
 
   .archive-list,
   .form-grid,
   .insight-grid {
     grid-template-columns: 1fr;
+  }
+
+  .date-group {
+    gap: 7px;
+  }
+
+  .record-button {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.62);
+    border-color: var(--soft-line);
+  }
+
+  .workspace {
+    gap: 16px;
+  }
+
+  .archive-hero {
+    gap: 10px;
+    padding: 2px 0 16px;
+  }
+
+  .archive-hero h2 {
+    font-size: 26px;
+  }
+
+  .archive-hero p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .detail-pane {
+    min-height: 0;
+    border-radius: 8px;
+    box-shadow: 0 10px 26px rgba(17, 24, 39, 0.06);
+  }
+
+  .detail-header {
+    padding: 18px;
+    gap: 14px;
   }
 
   .detail-title-row {
@@ -580,6 +654,142 @@ textarea {
   }
 
   .detail-header h2 {
+    font-size: 23px;
+    line-height: 1.32;
+  }
+
+  .detail-meta {
+    gap: 7px;
+  }
+
+  .pill {
+    max-width: 100%;
+    border-radius: 8px;
+    padding: 7px 9px;
+    overflow-wrap: anywhere;
+  }
+
+  .lead {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .detail-body {
+    padding: 16px;
+    gap: 18px;
+  }
+
+  .section-heading {
+    display: grid;
+    gap: 6px;
+    align-items: start;
+  }
+
+  .section-heading p {
+    font-size: 13px;
+  }
+
+  .diagram-section,
+  .transcript-section {
+    padding-top: 18px;
+  }
+
+  .diagram-frame {
+    overflow: hidden;
+  }
+
+  .diagram-frame img {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .insight-panel {
+    padding: 16px;
+  }
+
+  .insight-panel h3,
+  .diagram-section h3,
+  .transcript-section summary {
+    font-size: 16px;
+  }
+
+  .insight-panel ul {
+    padding-left: 18px;
+    line-height: 1.72;
+  }
+
+  .action-table,
+  .action-table tbody,
+  .action-table tr,
+  .action-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .action-table thead {
+    display: none;
+  }
+
+  .action-table tr {
+    border: 1px solid var(--soft-line);
+    border-radius: 8px;
+    padding: 10px 12px;
+  }
+
+  .action-table tr + tr {
+    margin-top: 10px;
+  }
+
+  .action-table td {
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 10px;
+    border-bottom: 0;
+    padding: 7px 0;
+  }
+
+  .action-table td::before {
+    content: attr(data-label);
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  .transcript-text,
+  .prompt-section pre {
+    padding: 14px;
+    max-height: 320px;
+    font-size: 13px;
+  }
+
+  .empty-copy {
+    padding: 34px 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .workspace,
+  .sidebar {
+    padding: 12px;
+  }
+
+  .archive-hero h2 {
     font-size: 24px;
+  }
+
+  .detail-header {
+    padding: 16px;
+  }
+
+  .detail-header h2 {
+    font-size: 21px;
+  }
+
+  .detail-body {
+    padding: 12px;
+  }
+
+  .insight-panel {
+    padding: 14px;
   }
 }
