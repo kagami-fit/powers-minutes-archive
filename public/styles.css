@@ -498,22 +498,35 @@ textarea {
 }
 
 .diagram-zoom-button::after {
-  content: "+";
+  content: "拡大";
   position: absolute;
   right: 12px;
   top: 12px;
   display: grid;
   place-items: center;
-  width: 34px;
+  min-width: 48px;
   height: 34px;
+  padding: 0 10px;
   border: 1px solid rgba(17, 24, 39, 0.14);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.92);
   color: var(--ink);
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 900;
   line-height: 1;
   box-shadow: 0 10px 24px rgba(17, 24, 39, 0.12);
+}
+
+.diagram-zoom-label {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  border-radius: 8px;
+  background: rgba(17, 24, 39, 0.86);
+  color: #fff;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 900;
 }
 
 .diagram-frame img {
@@ -792,9 +805,15 @@ textarea {
   .diagram-zoom-button::after {
     right: 8px;
     top: 8px;
-    width: 30px;
+    min-width: 46px;
     height: 30px;
-    font-size: 22px;
+    font-size: 12px;
+  }
+
+  .diagram-zoom-label {
+    left: 8px;
+    bottom: 8px;
+    padding: 6px 9px;
   }
 
   .diagram-frame img {
@@ -819,7 +838,7 @@ textarea {
   }
 
   .lightbox-panel img {
-    width: 920px;
+    width: 1280px;
     max-width: none;
     max-height: none;
     border-radius: 8px;
