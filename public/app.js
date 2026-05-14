@@ -177,7 +177,6 @@ function diagramSection(record) {
       <div class="diagram-frame">
         <button class="diagram-zoom-button" type="button" data-lightbox-src="${escapeHtml(url)}" data-lightbox-alt="${escapeHtml(record.title)}の図解" aria-label="${escapeHtml(record.title)}の図解を拡大">
           <img src="${escapeHtml(url)}" alt="${escapeHtml(record.title)}の図解" />
-          <span class="diagram-zoom-label">タップして拡大</span>
         </button>
       </div>
     </section>
@@ -193,7 +192,6 @@ function handleDetailClick(event) {
 function openLightbox(src, alt) {
   els.lightboxImage.src = src;
   els.lightboxImage.alt = alt;
-  els.lightboxImage.addEventListener("load", centerLightboxImage, { once: true });
   els.imageLightbox.hidden = false;
   els.imageLightbox.setAttribute("aria-hidden", "false");
   document.body.classList.add("lightbox-open");
@@ -205,13 +203,6 @@ function closeLightbox() {
   els.imageLightbox.setAttribute("aria-hidden", "true");
   document.body.classList.remove("lightbox-open");
   els.lightboxImage.removeAttribute("src");
-}
-
-function centerLightboxImage() {
-  const panel = els.lightboxImage.closest(".lightbox-panel");
-  if (!panel) return;
-  panel.scrollLeft = Math.max(0, (panel.scrollWidth - panel.clientWidth) / 2);
-  panel.scrollTop = 0;
 }
 
 function handleLightboxClick(event) {
