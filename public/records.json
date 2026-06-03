@@ -1,5 +1,178 @@
 [
   {
+    "id": "2026-06-03-powers-gym-web-line-ops-mtg",
+    "title": "POWERS GYM HP公開・Google/LINE導線MTG",
+    "meetingDate": "2026-06-03",
+    "participants": [
+      "石田さん",
+      "加賀美さん"
+    ],
+    "category": "運用準備MTG",
+    "location": "オンライン / 新丸子 POWERS GYM",
+    "notes": "POWERS GYMのGoogle Business、公式LINE、WordPress公開、現地導線、Maruko Running Clubの立ち上げを整理した打ち合わせ。",
+    "transcriptText": "長文文字起こしから要点を抽出して議事録化。主な論点は、Google Businessの整理、公式LINEとMaruko Running Clubのコミュニティ導線、Sakura/WordPressでのHP公開、店頭ポスター・チラシ・ガラス面の活用、入口・待機・靴・オートロックなど現地運用の確認。公開サイトのため、ログイン・認証・内部設定・個人条件などの詳細は掲載していません。",
+    "diagramUrl": "records/2026-06-03-powers-gym-web-line-ops-mtg/diagram.png",
+    "diagramCaption": "Google/LINE導線、HP公開、現地運用、次アクションを整理した図解。",
+    "createdAt": "2026-06-03T18:00:00.000+09:00",
+    "updatedAt": "2026-06-03T18:00:00.000+09:00",
+    "minutes": {
+      "generatedAt": "2026-06-03T18:00:00.000+09:00",
+      "title": "POWERS GYM HP公開・Google/LINE導線MTG",
+      "meetingDate": "2026-06-03",
+      "participants": [
+        "石田さん",
+        "加賀美さん"
+      ],
+      "summary": [
+        "Google Businessへのアクセスを確認し、Googleマップ上の写真・口コミ・サービス情報をPOWERS GYMの現在の方向性に合わせて整理する方針になった。",
+        "ホームページ、Googleマップ、公式LINE、メール問い合わせの情報を揃え、検索から体験予約まで迷わず進める導線を作ることを確認した。",
+        "Sakura/WordPress側の管理画面を確認し、既存URLを活かしながら、加賀美さんの既存パーソナルジム用テンプレートをベースに公開準備を進める方向になった。",
+        "POWERS GYM公式LINEを問い合わせ導線として整備し、Maruko Running ClubはOpenChatを使ってイベント告知・参加者コミュニティ化を進める方針になった。",
+        "店頭はガラス面、ポスター、チラシ入れ、QR導線を使い、リニューアルオープン感と体験予約への導線を作る。",
+        "入口、待機場所、靴・スリッパ、ロッカー、更衣室、オートロック、施設利用など、来店時の細かな体験導線を現地で詰める必要がある。"
+      ],
+      "agenda": [
+        "Google BusinessとGoogleマップ情報の整理",
+        "公式LINE、メール問い合わせ、OpenChatの導線設計",
+        "Sakura/WordPressを使ったホームページ公開方針",
+        "Maruko Running Clubの立ち上げと素材準備",
+        "店頭ポスター、チラシ入れ、ガラス面の使い方",
+        "入口・待機・靴・ロッカー・オートロックなど現地運用"
+      ],
+      "decisions": [
+        "Google Businessはレンタルジム寄りの見え方から、パーソナルジムとして伝わる情報に更新する。",
+        "Googleマップ上の不要・不適切な写真やレビューは、削除依頼や報告を進める。",
+        "ホームページ、Google Business、公式LINE、サービス内容、料金表は表記を揃える。",
+        "POWERS GYM公式LINEを体験問い合わせの主導線にし、LINEが苦手な人向けにメール問い合わせも用意する。",
+        "Maruko Running ClubはOpenChatを使い、イベント告知・参加者コミュニティ・見込み客接点として運用する。",
+        "ホームページはゼロから作り直すより、既存のパーソナルジム用WordPressテンプレートを移植・調整する方向で進める。",
+        "既存URLは検索評価を活かすため残し、中身を新しいPOWERS GYM向けサイトに差し替える。",
+        "店頭はスタンド看板よりも、ガラス面ポスターと貼り付け型チラシ入れを優先する。",
+        "外部レンタル予約の扱いは、パーソナルジム準備と干渉しないよう縮小・停止も含めて調整する。"
+      ],
+      "actionItems": [
+        {
+          "owner": "加賀美さん",
+          "task": "Google Businessの写真、口コミ、カテゴリ、サービス、料金、URLを確認し、必要な更新・報告を進める。",
+          "due": "次回まで",
+          "status": "未着手"
+        },
+        {
+          "owner": "加賀美さん",
+          "task": "POWERS GYM公式LINEの問い合わせ導線と、メール問い合わせの受け口をホームページに接続する。",
+          "due": "HP公開前",
+          "status": "未着手"
+        },
+        {
+          "owner": "加賀美さん",
+          "task": "WordPressテンプレートをPOWERS GYM向けに移植し、既存URLで公開できる初稿を作る。",
+          "due": "今日中の第一案",
+          "status": "未着手"
+        },
+        {
+          "owner": "加賀美さん",
+          "task": "Maruko Running ClubのOpenChat設定、案内文、初期投稿、告知導線を整える。",
+          "due": "次回まで",
+          "status": "未着手"
+        },
+        {
+          "owner": "石田さん",
+          "task": "Google Business、Sakura/WordPress、既存サイトの管理・共有状況を確認し、必要な権限を共有する。",
+          "due": "次回まで",
+          "status": "未着手"
+        },
+        {
+          "owner": "石田さん",
+          "task": "Maruko Running Clubのロゴ方針を一平さんと確認し、OpenChatやInstagramに使える素材を用意する。",
+          "due": "次回まで",
+          "status": "未着手"
+        },
+        {
+          "owner": "石田さん",
+          "task": "店頭のガラスフィルム、ポスター掲示位置、チラシ入れ設置位置、植物配置を確認する。",
+          "due": "現地確認時",
+          "status": "未着手"
+        },
+        {
+          "owner": "石田さん",
+          "task": "入口のオートロック設定や、来店者が早く着いた場合の待機導線を確認する。",
+          "due": "現地確認時",
+          "status": "未着手"
+        },
+        {
+          "owner": "加賀美さん",
+          "task": "チラシ・ポスター・ガラス面のコピーに、リニューアルオープンと体験予約の訴求を反映する。",
+          "due": "HP初稿後",
+          "status": "未着手"
+        },
+        {
+          "owner": "全員",
+          "task": "次回日程、現地確認、必要な購入品、公開前チェックをLINEで調整する。",
+          "due": "次回調整",
+          "status": "未着手"
+        }
+      ],
+      "risks": [
+        "Googleマップ、ホームページ、公式LINEの表記がずれると、検索評価や予約導線で機会損失が起きる。",
+        "Googleマップ上の不要な写真やレビューが残ると、初めて見る人に誤解を与える。",
+        "同一住所で複数のGoogleプロフィールを作る場合、審査や運用で制限が出る可能性がある。",
+        "旧WordPressの構造が複雑なため、移植・差し替え時に表示崩れや旧情報の残存が起きる可能性がある。",
+        "入口、靴、待機場所、オートロックの運用が曖昧だと、初回体験時の印象が悪くなる。",
+        "公開アーカイブに認証情報や内部条件を載せると情報管理リスクがあるため、議事録は要約公開に留める。"
+      ],
+      "nextSteps": [
+        "今日中にホームページ第一案を共有し、全体で見られる状態にする。",
+        "Google Businessの表示、写真、サービス、URL、料金の更新方針を確認する。",
+        "公式LINEとメール問い合わせをホームページに接続し、体験予約の入口を明確にする。",
+        "Maruko Running ClubのOpenChat、ロゴ、初期投稿、イベント告知の形を整える。",
+        "現地でガラス面、チラシ入れ、待機場所、靴導線、ロッカー、更衣室、オートロックを確認する。",
+        "Amazon購入候補、必要な素材、次回日程をLINEで共有する。"
+      ],
+      "keywords": [
+        {
+          "term": "Google Business",
+          "count": 12
+        },
+        {
+          "term": "Googleマップ",
+          "count": 9
+        },
+        {
+          "term": "公式LINE",
+          "count": 10
+        },
+        {
+          "term": "WordPress",
+          "count": 8
+        },
+        {
+          "term": "ホームページ",
+          "count": 14
+        },
+        {
+          "term": "Maruko Running Club",
+          "count": 6
+        },
+        {
+          "term": "OpenChat",
+          "count": 5
+        },
+        {
+          "term": "チラシ",
+          "count": 7
+        },
+        {
+          "term": "ガラス面",
+          "count": 5
+        },
+        {
+          "term": "オートロック",
+          "count": 4
+        }
+      ]
+    }
+  },
+  {
     "id": "2026-05-27-powers-gym-open-prep-mtg",
     "title": "POWERS GYM オープン準備・料金方針MTG",
     "meetingDate": "2026-05-27",
